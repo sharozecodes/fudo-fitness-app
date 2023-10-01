@@ -15,4 +15,18 @@ class User(db.Model, SerializerMixin):
     weight = db.Column(db.Float, nullable=False)
     height = db.Column(db.Float, nullable=False)
 
+    @hybrid_property
+    def password_hash(self):
+        raise AttributeError('Forbidden')
     
+    @password_hash.setter
+    def password_hash(self, password):
+        password_hash = bcrypt.generate_password_hash(
+            password.encode('utf-8')
+        )
+        self._password_hash = password_hash.decode('utf-8')
+    
+    def authenticate(self, password):
+        return bcrypt.check_password_hash(
+            self._password_hash, password.encode('utf-8')
+        )
