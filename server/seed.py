@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Standard library imports
-from random import randint, choice
+from random import randint, choice, sample
 
 
 # Remote library imports
@@ -71,7 +71,27 @@ if __name__ == '__main__':
         
         db.session.commit()
 
-
+        print("Creating relationships...")
+        users = User.query.all()
+        workouts = Workout.query.all()
+        recipes = Recipe.query.all()
+        
+        for user in users:
+            num_workout_prefs = randint(1, len(workouts))
+            num_recipe_prefs = randint(1, len(recipes))
+            
+            user_workout_prefs = sample(workouts, num_workout_prefs)
+            user_recipe_prefs = sample(recipes, num_recipe_prefs)
+            
+            for workout in user_workout_prefs:
+                workout_pref = WorkoutPreference(user_id=user.id, workout_id=workout.id)
+                db.session.add(workout_pref)
+            
+            for recipe in user_recipe_prefs:
+                recipe_pref = RecipePreference(user_id=user.id, recipe_id=recipe.id)
+                db.session.add(recipe_pref)
+        
+        db.session.commit()
 
 
 
