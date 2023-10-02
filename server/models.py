@@ -1,6 +1,7 @@
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.ext.hybrid import hybrid_property
+from datetime import date
 
 from config import db, bcrypt
 
@@ -30,3 +31,15 @@ class User(db.Model, SerializerMixin):
         return bcrypt.check_password_hash(
             self._password_hash, password.encode('utf-8')
         )
+    
+
+class Recipe(db.Model, SerializerMixin):
+    __tablename__ = 'recipes'
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255), unique=True, nullable=False)
+    category = db.Column(db.String(255), nullable=False)
+    instructions = db.Column(db.String, nullable=False)
+    prep_time = db.Column(db.Integer, nullable=False)
+    calories = db.Column(db.Integer, nullable=False)
+    protein = db.Column(db.Integer, nullable=False)
