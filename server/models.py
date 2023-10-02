@@ -16,6 +16,10 @@ class User(db.Model, SerializerMixin):
     weight = db.Column(db.Float, nullable=False)
     height = db.Column(db.Float, nullable=False)
 
+    workout_preferences = db.relationship('WorkoutPreference', backref='user', lazy='dynamic')
+    recipe_preferences = db.relationship('RecipePreference', backref='user', lazy='dynamic')
+
+
     @hybrid_property
     def password_hash(self):
         raise AttributeError('Forbidden')
@@ -45,6 +49,7 @@ class Recipe(db.Model, SerializerMixin):
     protein = db.Column(db.Integer, nullable=False)
 
 class Workout(db.Model):
+    __tablename__ = 'workouts'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     category = db.Column(db.String(255))
@@ -54,3 +59,12 @@ class Workout(db.Model):
     duration = db.Column(db.Integer)
     image_url = db.Column(db.String(255))
 
+class WorkoutPreference(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    workout_id = db.Column(db.Integer, db.ForeignKey('workouts.id'), nullable=False)
+
+class RecipePreference(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.id'), nullable=False)

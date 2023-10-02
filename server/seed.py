@@ -8,10 +8,11 @@ from faker import Faker
 
 # Local imports
 from app import app
-from models import db
+from models import *
 
 if __name__ == '__main__':
     fake = Faker()
     with app.app_context():
-        print("Starting seed...")
-        # Seed code goes here!
+        print("Deleting all records...")
+        Recipe.query.delete()
+        User.query.delete()
