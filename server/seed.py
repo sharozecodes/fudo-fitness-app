@@ -53,5 +53,25 @@ if __name__ == '__main__':
         
         db.session.commit()
 
+        print("Creating new recipes...")
+
+        recipe_categories = ['Vegan', 'Keto', 'High-Protein', 'Mediterranean', 'Low-Carb', 'Gluten-Free', 'Paleo', 'Vegetarian', 'Low-Fat', 'Dessert']
+
+        for _ in range(20):
+            title = fake.catch_phrase()
+            category = choice(recipe_categories)
+            instructions = fake.paragraphs(nb=randint(3, 6))
+            prep_time = randint(10, 120)
+            calories = randint(100, 800)
+            protein = randint(5, 50)
+
+            
+            recipe = Recipe(title=title, category=category, instructions='\n'.join(instructions), prep_time=prep_time, calories=calories, protein=protein)
+            db.session.add(recipe)
+        
+        db.session.commit()
+
+
+
 
 
