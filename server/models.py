@@ -56,7 +56,6 @@ class Workout(db.Model):
     instructions = db.Column(db.Text)
     duration = db.Column(db.Integer, nullable=False)
     calories_burnt = db.Column(db.Integer, nullable=False)
-    duration = db.Column(db.Integer)
     image_url = db.Column(db.String(255))
 
 class WorkoutPreference(db.Model):
