@@ -39,7 +39,17 @@ class Recipe(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), unique=True, nullable=False)
     category = db.Column(db.String(255), nullable=False)
-    instructions = db.Column(db.String, nullable=False)
+    instructions = db.Column(db.Text, nullable=False)
     prep_time = db.Column(db.Integer, nullable=False)
     calories = db.Column(db.Integer, nullable=False)
     protein = db.Column(db.Integer, nullable=False)
+
+class Workout(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255))
+    category = db.Column(db.String(255))
+    instructions = db.Column(db.Text)
+    duration = db.Column(db.Integer, nullable=False)
+    calories_burnt = db.Column(db.Integer, nullable=False)
+    duration = db.Column(db.Integer)
+    image_url = db.Column(db.String(255))
