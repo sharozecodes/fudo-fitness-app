@@ -53,3 +53,4 @@ class Workout(db.Model):
     calories_burnt = db.Column(db.Integer, nullable=False)
     duration = db.Column(db.Integer)
     image_url = db.Column(db.String(255))
+
