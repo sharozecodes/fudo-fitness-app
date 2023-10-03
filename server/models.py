@@ -48,7 +48,7 @@ class Recipe(db.Model, SerializerMixin):
     calories = db.Column(db.Integer, nullable=False)
     protein = db.Column(db.Integer, nullable=False)
 
-class Workout(db.Model):
+class Workout(db.Model, SerializerMixin):
     __tablename__ = 'workouts'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
@@ -58,12 +58,12 @@ class Workout(db.Model):
     calories_burnt = db.Column(db.Integer, nullable=False)
     image_url = db.Column(db.String(255))
 
-class WorkoutPreference(db.Model):
+class WorkoutPreference(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     workout_id = db.Column(db.Integer, db.ForeignKey('workouts.id'), nullable=False)
 
-class RecipePreference(db.Model):
+class RecipePreference(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.id'), nullable=False)
