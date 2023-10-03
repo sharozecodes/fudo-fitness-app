@@ -50,6 +50,7 @@ class Recipe(db.Model, SerializerMixin):
 
 class Workout(db.Model, SerializerMixin):
     __tablename__ = 'workouts'
+    serialize_rules = ("-workout_preference",)
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     category = db.Column(db.String(255))
@@ -62,6 +63,7 @@ class WorkoutPreference(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     workout_id = db.Column(db.Integer, db.ForeignKey('workouts.id'), nullable=False)
+    workout = db.relationship('Workout', backref='workout_preference')
 
 class RecipePreference(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)

@@ -73,12 +73,10 @@ class WorkoutIndex(Resource):
         return workouts, 200
     
 class UserWorkouts(Resource):
-    def get(self):
-        if session.get('user_id') == None:
-            return {'errors': 'unauthorized'}, 401
-        else:
-            recipes = [recipe.to_dict() for recipe in Recipe.query.all()]
-            return recipes, 200
+    def get(self, id):
+        workouts = [workout_pref.workout.to_dict() for workout_pref in WorkoutPreference.query.filter_by(user_id=id).all()]
+        return workouts, 200
+        
     
 @app.route('/')
 def index():
@@ -90,7 +88,7 @@ api.add_resource(Login, '/login', endpoint='login')
 api.add_resource(Logout, '/logout', endpoint='logout')
 api.add_resource(RecipeIndex, '/recipes', endpoint='recipes')
 api.add_resource(WorkoutIndex, '/workouts', endpoint='workouts')
-api.add_resource(WorkoutIndex, '/user/<id:int>/workouts', endpoint='workouts_by_user')
+api.add_resource(UserWorkouts, '/users/<int:id>/workouts', endpoint='workouts_by_user')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
