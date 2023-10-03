@@ -62,6 +62,24 @@ class Logout(Resource):
         else:
             return {'error':'unauthorized'}, 401
         
+class UserProfile(Resource):
+    def get(self, id):
+        user = User.query.filter_by(id=id).first()
+        if user:
+            return user.to_dict(), 200
+        else:
+            return {'error': 'User not found'}, 404
+
+    def delete(self, id):
+        user = User.query.filter_by(id=id).first()
+        if user:
+            db.session.delete(user)
+            db.session.commit()
+            return {}, 204
+        else:
+            return {'error': 'User not found'}, 404
+        
+        
 class RecipeIndex(Resource):
     def get(self):
         recipes = [recipe.to_dict() for recipe in Recipe.query.all()]
@@ -76,6 +94,12 @@ class UserWorkouts(Resource):
     def get(self, id):
         workouts = [workout_pref.workout.to_dict() for workout_pref in WorkoutPreference.query.filter_by(user_id=id).all()]
         return workouts, 200
+    
+class UserRecipes(Resource):
+    def get(self, id):
+        recipes = [recipe_pref.recipe.to_dict() for recipe_pref in RecipePreference.query.filter_by(user_id=id).all()]
+        return recipes, 200
+        
         
     
 @app.route('/')
@@ -89,6 +113,8 @@ api.add_resource(Logout, '/logout', endpoint='logout')
 api.add_resource(RecipeIndex, '/recipes', endpoint='recipes')
 api.add_resource(WorkoutIndex, '/workouts', endpoint='workouts')
 api.add_resource(UserWorkouts, '/users/<int:id>/workouts', endpoint='workouts_by_user')
+api.add_resource(UserRecipes, '/users/<int:id>/recipes', endpoint='recipes_by_user')
+api.add_resource(UserProfile, '/users/<int:id>', endpoint='user_profile')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

@@ -7,6 +7,7 @@ from config import db, bcrypt
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
+    serialize_rules = ("-recipe_preference","-workout_preference",)
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
@@ -16,8 +17,8 @@ class User(db.Model, SerializerMixin):
     weight = db.Column(db.Float, nullable=False)
     height = db.Column(db.Float, nullable=False)
 
-    workout_preferences = db.relationship('WorkoutPreference', backref='user', lazy='dynamic')
-    recipe_preferences = db.relationship('RecipePreference', backref='user', lazy='dynamic')
+    workout_preferences = db.relationship('WorkoutPreference', backref='user', cascade="all, delete-orphan")
+    recipe_preferences = db.relationship('RecipePreference', backref='user', cascade="all, delete-orphan")
 
 
     @hybrid_property
@@ -39,6 +40,7 @@ class User(db.Model, SerializerMixin):
 
 class Recipe(db.Model, SerializerMixin):
     __tablename__ = 'recipes'
+    serialize_rules = ("-recipe_preference",)
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), unique=True, nullable=False)
@@ -51,6 +53,7 @@ class Recipe(db.Model, SerializerMixin):
 class Workout(db.Model, SerializerMixin):
     __tablename__ = 'workouts'
     serialize_rules = ("-workout_preference",)
+
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     category = db.Column(db.String(255))
@@ -69,3 +72,4 @@ class RecipePreference(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.id'), nullable=False)
+    recipe = db.relationship('Recipe', backref='recipe_preference')
