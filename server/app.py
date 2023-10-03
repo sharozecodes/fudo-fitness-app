@@ -66,6 +66,7 @@ class UserProfile(Resource):
     def get(self, id):
         user = User.query.filter_by(id=id).first()
         if user:
+            print(user)
             return user.to_dict(), 200
         else:
             return {'error': 'User not found'}, 404
