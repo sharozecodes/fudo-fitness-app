@@ -106,7 +106,6 @@ class UserWorkouts(Resource):
         user = User.query.filter_by(id=id).first()
         workout = Workout.query.filter_by(id=workout_id).first()
 
-
         if user and workout:
             workout_preference = WorkoutPreference.query.filter_by(user_id=id, workout_id=workout_id).first()
             if not workout_preference:
@@ -119,11 +118,32 @@ class UserWorkouts(Resource):
         else:
             return {'error': 'Invalid user_id/workout_id'}, 401
     
-class UserRecipes(Resource):
+class UserRecipes(Resource):   
     def get(self, id):
-        recipes = [recipe_pref.recipe.to_dict() for recipe_pref in RecipePreference.query.filter_by(user_id=id).all()]
-        return recipes, 200
+        recipe_prefs = RecipePreference.query.filter_by(user_id=id).all()
+        if recipe_prefs:
+            recipes = [recipe_pref.recipe.to_dict() for recipe_pref in recipe_prefs]
+            return recipes, 200
+        else:
+            return {'error': 'User not found'}, 404
         
+    def post(self, id):
+        json = request.get_json()
+        recipe_id = json['recipe_id']
+        user = User.query.filter_by(id=id).first()
+        recipe = Recipe.query.filter_by(id=recipe_id).first()
+
+        if user and recipe:
+            recipe_preference = RecipePreference.query.filter_by(user_id=id, recipe_id=recipe_id).first()
+            if not recipe_preference:
+                recipe_pref = RecipePreference(user_id = id, recipe_id= recipe_id)
+                db.session.add(recipe_pref)
+                db.session.commit()
+                return recipe_pref.recipe.to_dict(), 201
+            else:
+                return {'error': 'preference already exists'}, 208
+        else:
+            return {'error': 'Invalid user_id/recipe_id'}, 401
         
     
 @app.route('/')
