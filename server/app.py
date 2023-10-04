@@ -96,6 +96,14 @@ class UserWorkouts(Resource):
         workouts = [workout_pref.workout.to_dict() for workout_pref in WorkoutPreference.query.filter_by(user_id=id).all()]
         return workouts, 200
     
+    def post(self, id):
+        json = request.get_json()
+        workout_id = json['workout_id']
+        workout_pref = WorkoutPreference(user_id = id, workout_id= workout_id)
+        db.session.add(workout_pref)
+        db.session.commit()
+        return workout_pref.workout.to_dict(), 201
+    
 class UserRecipes(Resource):
     def get(self, id):
         recipes = [recipe_pref.recipe.to_dict() for recipe_pref in RecipePreference.query.filter_by(user_id=id).all()]
