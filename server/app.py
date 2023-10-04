@@ -93,16 +93,31 @@ class WorkoutIndex(Resource):
     
 class UserWorkouts(Resource):
     def get(self, id):
-        workouts = [workout_pref.workout.to_dict() for workout_pref in WorkoutPreference.query.filter_by(user_id=id).all()]
-        return workouts, 200
+        workout_prefs = WorkoutPreference.query.filter_by(user_id=id).all()
+        if workout_prefs:
+            workouts = [workout_pref.workout.to_dict() for workout_pref in workout_prefs]
+            return workouts, 200
+        else:
+            return {'error': 'User not found'}, 404
     
     def post(self, id):
         json = request.get_json()
         workout_id = json['workout_id']
-        workout_pref = WorkoutPreference(user_id = id, workout_id= workout_id)
-        db.session.add(workout_pref)
-        db.session.commit()
-        return workout_pref.workout.to_dict(), 201
+        user = User.query.filter_by(id=id).first()
+        workout = Workout.query.filter_by(id=workout_id).first()
+
+
+        if user and workout:
+            workout_preference = WorkoutPreference.query.filter_by(user_id=id, workout_id=workout_id).first()
+            if not workout_preference:
+                workout_pref = WorkoutPreference(user_id = id, workout_id= workout_id)
+                db.session.add(workout_pref)
+                db.session.commit()
+                return workout_pref.workout.to_dict(), 201
+            else:
+                return {'error': 'preference already exists'}, 208
+        else:
+            return {'error': 'Invalid user_id/workout_id'}, 401
     
 class UserRecipes(Resource):
     def get(self, id):
