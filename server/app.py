@@ -145,10 +145,22 @@ class UserRecipes(Resource):
         else:
             return {'error': 'Invalid user_id/recipe_id'}, 401
         
+class WorkoutById(Resource):   
+    def get(self, id):
+        workout = Workout.query.filter_by(id=id).first()
+        if workout:
+            return workout.to_dict(), 200
+        else:
+            return {'error': 'User not found'}, 404
+        
+class RecipeById(Resource):   
+    def get(self, id):
+        recipe = Recipe.query.filter_by(id=id).first()
+        if recipe:
+            return recipe.to_dict(), 200
+        else:
+            return {'error': 'User not found'}, 404
     
-@app.route('/')
-def index():
-    return '<h1>Project Server</h1>'
 
 api.add_resource(Signup, '/signup', endpoint='signup')
 api.add_resource(CheckSession, '/check_session', endpoint='check_session')
@@ -156,6 +168,8 @@ api.add_resource(Login, '/login', endpoint='login')
 api.add_resource(Logout, '/logout', endpoint='logout')
 api.add_resource(RecipeIndex, '/recipes', endpoint='recipes')
 api.add_resource(WorkoutIndex, '/workouts', endpoint='workouts')
+api.add_resource(WorkoutById, '/workouts/<int:id>', endpoint='workout_by_id')
+api.add_resource(RecipeById, '/recipes/<int:id>', endpoint='recipe_by_id')
 api.add_resource(UserWorkouts, '/users/<int:id>/workouts', endpoint='workouts_by_user')
 api.add_resource(UserRecipes, '/users/<int:id>/recipes', endpoint='recipes_by_user')
 api.add_resource(UserProfile, '/users/<int:id>', endpoint='user_profile')
