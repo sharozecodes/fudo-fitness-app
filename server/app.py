@@ -151,7 +151,7 @@ class WorkoutById(Resource):
         if workout:
             return workout.to_dict(), 200
         else:
-            return {'error': 'User not found'}, 404
+            return {'error': 'Workout not found'}, 404
         
 class RecipeById(Resource):   
     def get(self, id):
@@ -159,7 +159,7 @@ class RecipeById(Resource):
         if recipe:
             return recipe.to_dict(), 200
         else:
-            return {'error': 'User not found'}, 404
+            return {'error': 'Recipe not found'}, 404
     
 
 api.add_resource(Signup, '/signup', endpoint='signup')
