@@ -46,6 +46,7 @@ class Recipe(db.Model, SerializerMixin):
     title = db.Column(db.String(255), unique=True, nullable=False)
     category = db.Column(db.String(255), nullable=False)
     instructions = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text)
     prep_time = db.Column(db.Integer, nullable=False)
     calories = db.Column(db.Integer, nullable=False)
     protein = db.Column(db.Integer, nullable=False)

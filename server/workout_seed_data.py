@@ -67,7 +67,7 @@ workouts = [
                         "This routine will help you develop functional strength and mobility using your body weight.",
         "duration": 40,
         "calories_burnt": 200,
-        "image_url": "https://www.borntough.com/cdn/shop/articles/Best_Calisthenic_Workout_for_Beginners.jpg?v=1636398453&width=1800"
+        "image_url": "https://miro.medium.com/v2/resize:fit:13202/0*Th6MNHLMhAX98E4-"
     },
     {
         "title": "Pilates for Core Strength",
@@ -168,7 +168,7 @@ workouts = [
                         "This meditation session will help reduce stress and promote relaxation.",
         "duration": 20,
         "calories_burnt": 0,
-        "image_url": "https://neurosciencenews.com/files/2023/06/kindness-meditqation-memory-depression-neuroscience-1170x585.jpg"
+        "image_url": "https://images.squarespace-cdn.com/content/v1/5d31ed671abe780001b2964d/1623282132996-D5O5P5AVHTU7FQOPTQGL/Jackie+Stewart+meditating+outside"
     },
     {
         "title": "Swimming for Cardio",
@@ -214,7 +214,7 @@ workouts = [
                         "This boxing workout will improve your cardiovascular fitness and coordination.",
         "duration": 40,
         "calories_burnt": 350,
-        "image_url": "https://example.com/boxing.jpg"
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/701/xmh-shadow-box-fight-fit-1493816401.jpg?crop=1xw:0.884xh;center,top"
     },
     {
         "title": "Outdoor Hiking",
@@ -231,7 +231,7 @@ workouts = [
                         "This hiking adventure is a great way to connect with nature and stay active.",
         "duration": 120,
         "calories_burnt": 600,
-        "image_url": "https://example.com/hiking.jpg"
+        "image_url": "https://coresites-cdn-adm.imgix.net/outdoorsmagic/wp-content/uploads/2022/04/Highlander.jpg?fit=crop"
     },
     {
         "title": "Pilates Mat Workout",
@@ -248,7 +248,7 @@ workouts = [
                         "This Pilates session will improve your core strength and posture.",
         "duration": 45,
         "calories_burnt": 180,
-        "image_url": "https://example.com/pilates-mat.jpg"
+        "image_url": "https://i.shgcdn.com/440b7c64-1ab8-4435-9aa5-4742373e1a36/-/format/auto/-/preview/3000x3000/-/quality/lighter/ "
     },
     {
         "title": "Indoor Rowing",
@@ -263,7 +263,7 @@ workouts = [
                         "This indoor rowing session provides an effective cardiovascular workout.",
         "duration": 30,
         "calories_burnt": 250,
-        "image_url": "https://example.com/rowing.jpg"
+        "image_url": "https://experiencelife.lifetime.life/wp-content/uploads/2022/01/mar22-wo-reap-what-you-row.jpg "
     },
     {
         "title": "Full-Body Resistance Band Workout",
@@ -280,7 +280,7 @@ workouts = [
                         "This resistance band workout will help you build strength and tone your body.",
         "duration": 40,
         "calories_burnt": 230,
-        "image_url": "https://example.com/resistance-band.jpg"
+        "image_url": "https://www.shape.com/thmb/7P8_mW9Nd-bVSwCwcIBbJMOBT1w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1181579947-6220efb6bd304bd28e41341bbf4477f2.jpg "
     },
     {
         "title": "Tai Chi for Mind and Body",
@@ -296,7 +296,7 @@ workouts = [
                         "This Tai Chi session promotes relaxation, balance, and mindfulness.",
         "duration": 30,
         "calories_burnt": 100,
-        "image_url": "https://example.com/taichi.jpg"
+        "image_url": "https://www.carmelclayparks.com/wp-content/uploads/2022/10/Header-Images-for-Website-1.png "
     },
     {
     "title": "Outdoor Yoga Retreat",
@@ -312,7 +312,7 @@ workouts = [
                     "This outdoor yoga retreat offers a serene and rejuvenating experience.",
     "duration": 90,
     "calories_burnt": 250,
-    "image_url": "https://example.com/outdoor-yoga.jpg"
+    "image_url": "https://media.architecturaldigest.com/photos/5b7c4f95969da70bdafb70fc/1:1/w_2001,h_2001,c_limit/Vista%20Celestial%20(Uvita,%20Costa%20Rica).jpg "
 },
 {
     "title": "Kettlebell Full-Body Workout",
@@ -329,7 +329,7 @@ workouts = [
                     "This kettlebell workout will help you build strength and endurance.",
     "duration": 45,
     "calories_burnt": 300,
-    "image_url": "https://example.com/kettlebell.jpg"
+    "image_url": "https://womensfitness.co.uk/wp-content/uploads/sites/3/2022/08/shutterstock_1745040113-full-body-kettlebell-workout-for-women.jpg?w=900 "
 },
 {
     "title": "Mindful Breathing",
@@ -345,7 +345,7 @@ workouts = [
                     "This mindful breathing exercise promotes relaxation and stress relief.",
     "duration": 15,
     "calories_burnt": 0,
-    "image_url": "https://example.com/mindful-breathing.jpg"
+    "image_url": "https://images.squarespace-cdn.com/content/v1/566b0c4aa2bab89284eb0bb3/1612716286212-Y10IYYRE2NIRZA89AJA3/pexels-ivan-samkov-6648714.jpg "
 },
 {
     "title": "Jump Rope Cardio",
@@ -360,7 +360,7 @@ workouts = [
                     "This jump rope cardio workout will get your heart rate up and boost your energy.",
     "duration": 20,
     "calories_burnt": 200,
-    "image_url": "https://example.com/jump-rope.jpg"
+    "image_url": "https://www.health.com/thmb/u0d-4f6UbBHlPCg7xVWdWL_YYYU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/jump-rope-GettyImages-1177167256-2000-a51715d6421a486a956e01ef89bae0a3.jpg "
 },
 {
     "title": "Full-Body Stretching Routine",
@@ -376,8 +376,9 @@ workouts = [
                     "This stretching routine will improve your flexibility and promote relaxation.",
     "duration": 30,
     "calories_burnt": 50,
-    "image_url": "https://example.com/stretching.jpg"
+    "image_url": "https://cdn.theworkoutdigest.com/wp-content/uploads/2021/11/Full-body-stretch-Young-woman-doing-upward-facing-dog-exercise.jpg "
 },
 ]
+
 
 
