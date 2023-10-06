@@ -16,7 +16,7 @@ workouts = [
                         "improve your flexibility and balance.",
         "duration": 30,
         "calories_burnt": 150,
-        "image_url": "https://example.com/yoga.jpg"
+        "image_url": "https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/sitting-yoga-asanas.jpg"
     },
     {
         "title": "High-Intensity Interval Training",
@@ -33,7 +33,7 @@ workouts = [
                         "helping you burn approximately 300 calories.",
         "duration": 20,
         "calories_burnt": 300,
-        "image_url": "https://example.com/hiit.jpg"
+        "image_url": "https://static.scientificamerican.com/sciam/cache/file/F7AC4011-A227-4E87-B4C5CA373BE2D382_source.jpg?w=590&h=800&7CCE65EF-D3AE-4216-80148F994817305E"
     },
     {
         "title": "Strength Training",
@@ -50,7 +50,7 @@ workouts = [
                         "This routine will help you build muscle and increase your overall strength.",
         "duration": 45,
         "calories_burnt": 250,
-        "image_url": "https://example.com/strength.jpg"
+        "image_url": "https://www.orbitfitness.com.au/img/cms/Beginners%20guide%20%20Strength%20training%20with%20free%20weights%20.jpg"
     },
     {
         "title": "Calisthenics",
@@ -67,7 +67,7 @@ workouts = [
                         "This routine will help you develop functional strength and mobility using your body weight.",
         "duration": 40,
         "calories_burnt": 200,
-        "image_url": "https://example.com/calisthenics.jpg"
+        "image_url": "https://www.borntough.com/cdn/shop/articles/Best_Calisthenic_Workout_for_Beginners.jpg?v=1636398453&width=1800"
     },
     {
         "title": "Pilates for Core Strength",
@@ -84,7 +84,7 @@ workouts = [
                         "This Pilates session will improve your core strength and posture.",
         "duration": 45,
         "calories_burnt": 180,
-        "image_url": "https://example.com/pilates.jpg"
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/smiling-woman-doing-relaxation-exercises-on-royalty-free-image-492161070-1565100321.jpg?resize=1200:*"
     },
     {
         "title": "Running for Beginners",
@@ -100,7 +100,7 @@ workouts = [
                         "This workout will help you gradually build endurance and stamina.",
         "duration": 30,
         "calories_burnt": 200,
-        "image_url": "https://example.com/running.jpg"
+        "image_url": "https://media.gq-magazine.co.uk/photos/64e33a986413ab6405a9c700/16:9/w_2240,c_limit/Running-Slow.jpg"
     },
     {
         "title": "Full-Body Yoga Flow",
@@ -117,7 +117,7 @@ workouts = [
                         "This yoga flow will leave you feeling balanced and rejuvenated.",
         "duration": 60,
         "calories_burnt": 250,
-        "image_url": "https://example.com/full-body-yoga.jpg"
+        "image_url": "https://skinnyms.com/wp-content/uploads/2021/08/Full-Body-Yoga-Flow-for-Beginners-3-2048x1365.jpg"
     },
     {
         "title": "Cycling Adventure",
@@ -134,7 +134,7 @@ workouts = [
                         "This cycling adventure is a great way to explore new places and stay fit.",
         "duration": 60,
         "calories_burnt": 400,
-        "image_url": "https://example.com/cycling.jpg"
+        "image_url": "https://images.immediate.co.uk/production/volatile/sites/21/2022/08/How-to-get-faster-at-climbing-hills-on-a-bike-739f804.jpg?webp=true&quality=45&resize=1240%2C826"
     },
     {
         "title": "Full-Body Dumbbell Workout",
@@ -151,7 +151,7 @@ workouts = [
                         "This workout will help you build strength and tone your body.",
         "duration": 45,
         "calories_burnt": 280,
-        "image_url": "https://example.com/dumbbell.jpg"
+        "image_url": "https://www.mensjournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTk2MTM2ODAwNDgyMjM5NjMz/db_main.webp"
     },
     {
         "title": "Meditation and Mindfulness",
@@ -168,7 +168,7 @@ workouts = [
                         "This meditation session will help reduce stress and promote relaxation.",
         "duration": 20,
         "calories_burnt": 0,
-        "image_url": "https://example.com/meditation.jpg"
+        "image_url": "https://neurosciencenews.com/files/2023/06/kindness-meditqation-memory-depression-neuroscience-1170x585.jpg"
     },
     {
         "title": "Swimming for Cardio",
@@ -183,7 +183,7 @@ workouts = [
                         "This swimming workout will improve your cardiovascular fitness and overall strength.",
         "duration": 45,
         "calories_burnt": 350,
-        "image_url": "https://example.com/swimming.jpg"
+        "image_url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/9833/GettyImages-526245433.jpg"
     },
     {
         "title": "Bodyweight Circuit",
@@ -199,7 +199,7 @@ workouts = [
                         "This circuit workout is effective for building strength and endurance.",
         "duration": 30,
         "calories_burnt": 200,
-        "image_url": "https://example.com/bodyweight.jpg"
+        "image_url": "https://cdn.mos.cms.futurecdn.net/oYDbf5hQAePHEBNZTQMXRA-1920-80.jpg.webp"
     },
     {
         "title": "Boxing for Cardio",
