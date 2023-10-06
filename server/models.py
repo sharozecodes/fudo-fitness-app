@@ -50,6 +50,7 @@ class Recipe(db.Model, SerializerMixin):
     prep_time = db.Column(db.Integer, nullable=False)
     calories = db.Column(db.Integer, nullable=False)
     protein = db.Column(db.Integer, nullable=False)
+    image_url = db.Column(db.String(255))
 
 class Workout(db.Model, SerializerMixin):
     __tablename__ = 'workouts'
