@@ -57,6 +57,7 @@ class Workout(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     category = db.Column(db.String(255))
+    description = db.Column(db.Text)
     instructions = db.Column(db.Text)
     duration = db.Column(db.Integer, nullable=False)
     calories_burnt = db.Column(db.Integer, nullable=False)

@@ -38,17 +38,34 @@ if __name__ == '__main__':
 
         print("Creating new workouts...")
             
-        workout_types = ['Calisthenics','Cardio', 'Strength', 'Yoga', 'Pilates']
-    
-        for _ in range(20):
-            title = fake.catch_phrase()
-            category = choice(workout_types)
-            instructions = fake.paragraph()
-            duration = randint(15, 120)
-            calories_burnt = randint(50, 500)
-            image_url = fake.image_url()
-            
-            workout = Workout(title=title, category=category, instructions=instructions, duration=duration, calories_burnt=calories_burnt, image_url=image_url)
+        workouts = [
+            {
+                "title": "Morning Yoga",
+                "category": "Yoga",
+                "instructions": "Start your day with a relaxing yoga session.",
+                "duration": 30,
+                "calories_burnt": 150,
+                "image_url": "https://example.com/yoga.jpg"
+            },
+            {
+                "title": "High-Intensity Interval Training",
+                "category": "HIIT",
+                "instructions": "A challenging HIIT workout for fat burning.",
+                "duration": 20,
+                "calories_burnt": 300,
+                "image_url": "https://example.com/hiit.jpg"
+            },
+            # Add more workout entries here...
+        ]
+        for data in workouts:  # Adjust the range if you have more sample data
+            workout = Workout(
+                title=data["title"],
+                category=data["category"],
+                instructions=data["instructions"],
+                duration=data["duration"],
+                calories_burnt=data["calories_burnt"],
+                image_url=data["image_url"]
+            )
             db.session.add(workout)
         
         db.session.commit()
