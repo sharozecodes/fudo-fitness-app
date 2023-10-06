@@ -280,7 +280,7 @@ workouts = [
                         "This resistance band workout will help you build strength and tone your body.",
         "duration": 40,
         "calories_burnt": 230,
-        "image_url": "https://www.shape.com/thmb/7P8_mW9Nd-bVSwCwcIBbJMOBT1w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1181579947-6220efb6bd304bd28e41341bbf4477f2.jpg "
+        "image_url": "https://www.realsimple.com/thmb/FkQ0reI11e-zb-mS8rA_GprFgSY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/resistance-band-exercises-workout-moves-2000-d08565f9ac4d4b748e1a777e3a636eb2.jpg"
     },
     {
         "title": "Tai Chi for Mind and Body",
@@ -296,7 +296,7 @@ workouts = [
                         "This Tai Chi session promotes relaxation, balance, and mindfulness.",
         "duration": 30,
         "calories_burnt": 100,
-        "image_url": "https://www.carmelclayparks.com/wp-content/uploads/2022/10/Header-Images-for-Website-1.png "
+        "image_url": "https://nationaltoday.com/wp-content/uploads/2022/06/10-Qigong-1200x834.jpg.webp"
     },
     {
     "title": "Outdoor Yoga Retreat",
@@ -312,7 +312,7 @@ workouts = [
                     "This outdoor yoga retreat offers a serene and rejuvenating experience.",
     "duration": 90,
     "calories_burnt": 250,
-    "image_url": "https://media.architecturaldigest.com/photos/5b7c4f95969da70bdafb70fc/1:1/w_2001,h_2001,c_limit/Vista%20Celestial%20(Uvita,%20Costa%20Rica).jpg "
+    "image_url": "https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2009/05/yoga-stretching-exercise-is-performed-by-young-woman-stretching-her-lower-back-spine-health-outdoors-park-copy.jpg"
 },
 {
     "title": "Kettlebell Full-Body Workout",
