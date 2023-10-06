@@ -10,6 +10,7 @@ from faker import Faker
 # Local imports
 from app import app
 from models import *
+from workout_seed_data import workouts
 
 if __name__ == '__main__':
     fake = Faker()
@@ -38,30 +39,13 @@ if __name__ == '__main__':
 
         print("Creating new workouts...")
             
-        workouts = [
-            {
-                "title": "Morning Yoga",
-                "category": "Yoga",
-                "instructions": "Start your day with a relaxing yoga session.",
-                "duration": 30,
-                "calories_burnt": 150,
-                "image_url": "https://example.com/yoga.jpg"
-            },
-            {
-                "title": "High-Intensity Interval Training",
-                "category": "HIIT",
-                "instructions": "A challenging HIIT workout for fat burning.",
-                "duration": 20,
-                "calories_burnt": 300,
-                "image_url": "https://example.com/hiit.jpg"
-            },
-            # Add more workout entries here...
-        ]
+        
         for data in workouts:  # Adjust the range if you have more sample data
             workout = Workout(
                 title=data["title"],
                 category=data["category"],
                 instructions=data["instructions"],
+                description=data['description'],
                 duration=data["duration"],
                 calories_burnt=data["calories_burnt"],
                 image_url=data["image_url"]
