@@ -16,17 +16,22 @@ class Signup(Resource):
     def post(self):
         
         json = request.get_json()
+        
         if 'username' in json and 'password' in json and 'name' in json:
-            user = User(
-                username=json['username'],
-                name=json['name'],
-            )
-            user.password_hash = json['password']
-            db.session.add(user)
-            db.session.commit()
-            session['user_id'] = user.id
-
-            return user.to_dict(), 201
+            username=json['username']
+            user_check = User.query.filter_by(username=username).first()
+            if not user_check:
+                user = User(
+                    username=username,
+                    name=json['name'],
+                )
+                user.password_hash = json['password']
+                db.session.add(user)
+                db.session.commit()
+                session['user_id'] = user.id
+                return user.to_dict(), 201
+            else:
+                return {'error': 'user already exists'}, 208
         else:
             return {'error': 'unprocessable entity'}, 422
         
