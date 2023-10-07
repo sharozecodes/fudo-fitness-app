@@ -16,14 +16,10 @@ class Signup(Resource):
     def post(self):
         
         json = request.get_json()
-        if 'username' in json and 'password' in json and 'name' in json and 'date_of_birth' in json and 'weight' in json and 'height' in json:
+        if 'username' in json and 'password' in json and 'name' in json:
             user = User(
                 username=json['username'],
                 name=json['name'],
-                date_of_birth=json['date_of_birth'],
-                weight=json['weight'],
-                height=json['height'],
-                    
             )
             user.password_hash = json['password']
             db.session.add(user)

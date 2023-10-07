@@ -13,9 +13,7 @@ class User(db.Model, SerializerMixin):
     username = db.Column(db.String(255), unique=True, nullable=False)
     _password_hash = db.Column(db.String)
     name = db.Column(db.String(255), nullable=False)
-    date_of_birth = db.Column(db.Date, nullable=False)
-    weight = db.Column(db.Float, nullable=False)
-    height = db.Column(db.Float, nullable=False)
+
 
     workout_preferences = db.relationship('WorkoutPreference', backref='user', cascade="all, delete-orphan")
     recipe_preferences = db.relationship('RecipePreference', backref='user', cascade="all, delete-orphan")

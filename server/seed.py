@@ -27,11 +27,8 @@ if __name__ == '__main__':
             
             username = fake.user_name()
             name = fake.name()
-            date_of_birth = fake.date_of_birth(minimum_age=18, maximum_age=70)
-            weight = randint(80,500)
-            height = randint(60, 272)
-
-            user = User(username=username, name=name, date_of_birth=date_of_birth, weight=weight, height=height)
+        
+            user = User(username=username, name=name)
             user.password_hash = user.username + 'password'
             db.session.add(user)
 
