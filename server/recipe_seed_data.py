@@ -13,7 +13,7 @@ recipes = [
         "prep_time": 45,
         "calories": 250,
         "protein": 12,
-        "image_url": "https://example.com/vegan-lentil-soup.jpg"
+        "image_url": "https://www.eatwell101.com/wp-content/uploads/2015/11/Best-Lentil-Soup-Recipe.jpg"
     },
     {
         "title": "Keto Cauliflower Rice Stir-Fry",
@@ -28,7 +28,7 @@ recipes = [
         "prep_time": 20,
         "calories": 300,
         "protein": 25,
-        "image_url": "https://example.com/keto-stir-fry.jpg"
+        "image_url": "https://i0.wp.com/www.onceuponachef.com/images/2016/10/Cauliflower-Fried-Rice.jpg?resize=1700%2C1156&ssl=1"
     },
     {
         "title": "High-Protein Chicken Bowl",
@@ -43,7 +43,7 @@ recipes = [
         "prep_time": 30,
         "calories": 400,
         "protein": 35,
-        "image_url": "https://example.com/high-protein-bowl.jpg"
+        "image_url": "https://www.asweetpeachef.com/wp-content/uploads/2018/02/chicken-protein-bowl-4.jpg"
     },
     {
         "title": "Mediterranean Chickpea Salad",
@@ -58,7 +58,7 @@ recipes = [
         "prep_time": 15,
         "calories": 220,
         "protein": 8,
-        "image_url": "https://example.com/mediterranean-salad.jpg"
+        "image_url": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/08/Mediterranean-Chickpea-Salad-4.jpg"
     },
     {
         "title": "Low-Carb Zucchini Lasagna",
