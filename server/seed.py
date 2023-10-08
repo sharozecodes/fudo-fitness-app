@@ -11,6 +11,7 @@ from faker import Faker
 from app import app
 from models import *
 from workout_seed_data import workouts
+from recipe_seed_data import recipes
 
 if __name__ == '__main__':
     fake = Faker()
@@ -53,18 +54,17 @@ if __name__ == '__main__':
 
         print("Creating new recipes...")
 
-        recipe_categories = ['Vegan', 'Keto', 'High-Protein', 'Mediterranean', 'Low-Carb', 'Gluten-Free', 'Paleo', 'Vegetarian', 'Low-Fat', 'Dessert']
-
-        for _ in range(20):
-            title = fake.catch_phrase()
-            category = choice(recipe_categories)
-            instructions = fake.paragraphs(nb=randint(3, 6))
-            prep_time = randint(10, 120)
-            calories = randint(100, 800)
-            protein = randint(5, 50)
-
-            
-            recipe = Recipe(title=title, category=category, instructions='\n'.join(instructions), prep_time=prep_time, calories=calories, protein=protein)
+        for data in recipes:
+            recipe = Recipe(
+                title = data["title"],
+                category = data["category"],
+                instructions = data["instructions"],
+                description = data["description"],
+                prep_time = data["prep_time"],
+                calories = data["calories"],
+                protein = data["protein"],
+                image_url = data["image_url"]
+            )
             db.session.add(recipe)
         
         db.session.commit()
