@@ -7,7 +7,7 @@ from config import db, bcrypt
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
-    serialize_rules = ("-recipe_preferences","-workout_preferences",)
+    serialize_rules = ("-recipe_preferences","-workout_preferences","-_password_hash",)
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
