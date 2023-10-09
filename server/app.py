@@ -90,12 +90,12 @@ class UserProfile(Resource):
         args = user_parser.parse_args()
         user = User.query.filter_by(id=id).first()
         if user:
-            if 'username' in args:
+            if 'username' in args and args['username']:
                 user.username = args['username']
-            if 'name' in args:
+            if 'name' in args and args['name']:
                 user.name = args['name']
-            # if 'password' in args:
-            #     user.password_hash = args['password']
+            if 'password' in args and args['password']:
+                user.password_hash = args['password']
 
             db.session.commit()
             return user.to_dict(), 200
