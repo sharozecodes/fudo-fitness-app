@@ -4,12 +4,17 @@
 
 # Remote library imports
 from flask import request, session
-from flask_restful import Resource
+from flask_restful import Resource, reqparse
+
 
 # Local imports
 from config import app, db, api
 from models import *
 
+user_parser = reqparse.RequestParser()
+user_parser.add_argument('username', type=str)
+user_parser.add_argument('name', type=str)
+user_parser.add_argument('password', type=str)
 
 # Views go here!
 class Signup(Resource):
@@ -78,6 +83,22 @@ class UserProfile(Resource):
             db.session.delete(user)
             db.session.commit()
             return {}, 204
+        else:
+            return {'error': 'User not found'}, 404
+        
+    def patch(self, id):
+        args = user_parser.parse_args()
+        user = User.query.filter_by(id=id).first()
+        if user:
+            if 'username' in args:
+                user.username = args['username']
+            if 'name' in args:
+                user.name = args['name']
+            # if 'password' in args:
+            #     user.password_hash = args['password']
+
+            db.session.commit()
+            return user.to_dict(), 200
         else:
             return {'error': 'User not found'}, 404
         
