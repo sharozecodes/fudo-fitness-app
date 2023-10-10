@@ -88,7 +88,7 @@ recipes = [
         "prep_time": 25,
         "calories": 220,
         "protein": 6,
-        "image_url": "https://eatwithclarity.com/wp-content/uploads/2023/04/gluten-free-quinoa-tabbouleh-salad-7.jpg"
+        "image_url": "https://www.strandsofmylife.com/wp-content/uploads/2014/05/Quinoa-Salad-1024-6991.jpg"
     },
     {
         "title": "Paleo Baked Salmon",
@@ -102,7 +102,7 @@ recipes = [
         "prep_time": 30,
         "calories": 300,
         "protein": 25,
-        "image_url": "https://www.maryswholelife.com/wp-content/uploads/2021/09/Garlic_Herb_Salmon_6-scaled.jpg"
+        "image_url": "https://trinakrug.com/wp-content/uploads/2020/03/Lemon-Herb-Salmon-9.jpg"
     },
     {
         "title": "Vegetarian Chickpea Curry",
@@ -117,7 +117,7 @@ recipes = [
         "prep_time": 40,
         "calories": 280,
         "protein": 10,
-        "image_url": "https://hostthetoast.com/wp-content/uploads/2020/06/Chickpea-Curry-9.jpg"
+        "image_url": "https://chalocompany.com/wp-content/uploads/2020/08/Coconut-Chickpea-curry-web-2-uai-900x600.jpg"
     },
     {
         "title": "Low-Fat Greek Salad",
@@ -132,7 +132,7 @@ recipes = [
         "prep_time": 20,
         "calories": 180,
         "protein": 6,
-        "image_url": "https://allthehealthythings.com/wp-content/uploads/2020/06/IMG_4566-scaled.jpg"
+        "image_url": "https://www.dontsweattherecipe.com/wp-content/uploads/2017/03/greek-salad-03.jpg"
     },
     {
         "title": "Chocolate Avocado Mousse",
@@ -146,7 +146,7 @@ recipes = [
         "prep_time": 15,
         "calories": 200,
         "protein": 3,
-        "image_url": "https://goodlivingguide.com/wp-content/uploads/2019/04/featured-image_Avocado-Chocolate-Mousse-e1555716927757.jpg"
+        "image_url": "https://wholesomekids.ca/wp-content/uploads/2020/04/iStock-1047026788-e1585935478368.jpg"
     },
     {
         "title": "Vegan Lentil Tacos",
@@ -160,7 +160,7 @@ recipes = [
         "prep_time": 30,
         "calories": 300,
         "protein": 15,
-        "image_url": "https://iheartvegetables.com/wp-content/uploads/2018/05/Vegan-Lentil-Tacos-1-of-5.jpg"
+        "image_url": "https://heartfultable.com/wp-content/uploads/2021/11/Cauliflower-Lentil-Tacos-1.jpg"
     },
     {
         "title": "Keto Avocado Bacon Egg Bowl",
@@ -176,7 +176,7 @@ recipes = [
         "prep_time": 20,
         "calories": 350,
         "protein": 15,
-        "image_url": "https://kimspireddiy.com/wp-content/uploads/2019/01/Keto-Avocado-Recipe_EASY-Low-Carb-Avocado-Bacon-and-Egg-Cups_Healthy-Ketogenic-Diet-Idea_0355.jpg"
+        "image_url": "https://ucarecdn.com/a562b1ce-47bc-42b8-8a0c-c05bee7bf7e4/"
     },
     {
         "title": "High-Protein Tofu Stir-Fry",
@@ -191,7 +191,7 @@ recipes = [
         "prep_time": 25,
         "calories": 320,
         "protein": 20,
-        "image_url": "https://simpleveganblog.com/wp-content/uploads/2023/01/easy-tofu-stir-fry-square.jpg"
+        "image_url": "https://cdn.sunbasket.com/7312ba22-810b-4409-88d8-3234bfc86c84.jpg"
     },
     {
         "title": "Mediterranean Grilled Chicken",
@@ -205,7 +205,7 @@ recipes = [
         "prep_time": 35,
         "calories": 280,
         "protein": 30,
-        "image_url": "https://gimmedelicious.com/wp-content/uploads/2015/05/Greek-Inspired-Chicken-Rice-Bowls-2-of-15.jpg"
+        "image_url": "https://www.heinens.com/wp-content/uploads/2020/07/Mediterranean-Grilled-Chicken-with-Dill-Greek-Yogurt-Sauce_800x550.jpg"
     },
     {
         "title": "Low-Carb Cauliflower Mash",
@@ -219,7 +219,7 @@ recipes = [
         "prep_time": 20,
         "calories": 120,
         "protein": 3,
-        "image_url": "https://sugarfreelondoner.com/wp-content/uploads/2020/09/keto-mashed-cauliflower.jpg"
+        "image_url": "https://jenniferbanz.com/wp-content/uploads/2018/08/Instant-Pot-Mashed-Cauliflower-5.jpg"
     },
     {
         "title": "Gluten-Free Banana Bread",
@@ -233,7 +233,7 @@ recipes = [
         "prep_time": 55,
         "calories": 180,
         "protein": 4,
-        "image_url": "https://realfood.tesco.com/media/images/303-glutenfree-banana-bread-05f8eb3f-f4dd-481e-b43e-8eaa88ba96c6-0-1400x919.jpg"
+        "image_url": "https://paleoglutenfree.com/wp-content/uploads/2019/02/paleo-gluten-free-banana-bread-12-of-22-900x600.jpg"
     },
     {
         "title": "Paleo Sweet Potato Fries",
@@ -247,7 +247,7 @@ recipes = [
         "prep_time": 30,
         "calories": 150,
         "protein": 2,
-        "image_url": "https://pinchmegood.com/wp-content/uploads/2019/09/sweet-potato-fries-in-a-mug.jpg"
+        "image_url": "https://www.kibitzspot.com/wp-content/uploads/2021/10/Food-Sweet-Potato-Fries-Depositphotos_113688196_L.jpg"
     },
     {
         "title": "Vegetarian Spinach and Mushroom Stuffed Peppers",
@@ -262,7 +262,7 @@ recipes = [
         "prep_time": 40,
         "calories": 200,
         "protein": 8,
-        "image_url": "https://hungryhappens.net/wp-content/uploads/2022/01/JPEG-image-192-1-720x960.jpeg"
+        "image_url": "https://hungryfoodie.com/wp-content/uploads/2022/02/Cheesy-Spinach-Stuffed-Peppers-22.jpg"
     },
     {
         "title": "Low-Fat Berry Smoothie",
@@ -276,7 +276,7 @@ recipes = [
         "prep_time": 10,
         "calories": 150,
         "protein": 4,
-        "image_url": "https://cookingformysoul.com/wp-content/uploads/2022/05/triple-berry-smoothie-feat-min.jpg"
+        "image_url": "https://realfoodrealdeals.com/wp-content/uploads/2021/01/oat-milk-smoothie-featured.jpg"
     },
     {
         "title": "Chocolate Avocado Pudding",
@@ -290,7 +290,7 @@ recipes = [
         "prep_time": 15,
         "calories": 200,
         "protein": 3,
-        "image_url": "https://themovementmenu.com/wp-content/uploads/2019/05/Paleo-and-Keto-Chocolate-Pudding.jpg"
+        "image_url": "https://vebaresourcecenter.com/wp-content/uploads/2021/03/Chocolate-Avocado-Pudding.jpg"
     },
     {
         "title": "Vegan Chickpea Curry",
@@ -305,7 +305,7 @@ recipes = [
         "prep_time": 40,
         "calories": 280,
         "protein": 10,
-        "image_url": "https://makeitdairyfree.com/wp-content/uploads/2022/09/easy-vegan-chickpea-curry-3.jpg"
+        "image_url": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/vegan-chickpea-coconut-curry-d528b3ae.jpg"
     },
     {
         "title": "Keto Avocado Chocolate Smoothie",
@@ -319,7 +319,7 @@ recipes = [
         "prep_time": 10,
         "calories": 250,
         "protein": 3,
-        "image_url": "https://www.splenda.com/wp-content/uploads/2020/12/keto-mint-chocolate-avocado-smoothie-2000x1000.jpg"
+        "image_url": "https://delightfulemade.com/wp-content/uploads/2022/02/Chocolate-Avocado-smoothie-cu-720x540.jpg"
     },
 {
     "title": "Low-Fat Greek Yogurt Parfait",
@@ -333,6 +333,6 @@ recipes = [
     "prep_time": 10,
     "calories": 200,
     "protein": 10,
-    "image_url": "https://simplyhomecooked.com/wp-content/uploads/2021/08/yogurt-parfait-4.jpg"
+    "image_url": "https://www.bornfitness.com/wp-content/uploads/2016/08/protein-granola-.png"
 }
 ]
