@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 
-# Standard library imports
 from random import randint, choice, sample
 
 
-# Remote library imports
 from faker import Faker
 
-# Local imports
 from app import app
 from models import *
 from workout_seed_data import workouts
@@ -38,7 +35,7 @@ if __name__ == '__main__':
         print("Creating new workouts...")
             
         
-        for data in workouts:  # Adjust the range if you have more sample data
+        for data in workouts: 
             workout = Workout(
                 title=data["title"],
                 category=data["category"],

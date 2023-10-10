@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 
-# Standard library imports
-
-# Remote library imports
 from flask import request, session
 from flask_restful import Resource, reqparse
 
-
-# Local imports
 from config import app, db, api
 from models import *
 
@@ -16,7 +11,7 @@ user_parser.add_argument('username', type=str)
 user_parser.add_argument('name', type=str)
 user_parser.add_argument('password', type=str)
 
-# Views go here!
+
 class Signup(Resource):
     def post(self):
         
